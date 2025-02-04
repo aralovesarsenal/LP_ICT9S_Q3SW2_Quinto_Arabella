@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>｡𖦹°‧ (⸝⸝> ᴗ•⸝⸝) ⭑.ᐟ</title>
+    <style>
+        body {
+            background-color: #ffe6f2;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            color: #ff4d94;
+        }
+        .container {
+            background: #ffccdd;
+            border-radius: 15px;
+            padding: 20px;
+            width: 50%;
+            margin: auto;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+        .content {
+            flex: 1;
+        }
+        .image {
+            flex: 1;
+        }
+        .image img {
+            width: 400px;
+            height: auto;
+        }
+        input, button {
+            margin: 10px;
+            padding: 10px;
+            border-radius: 10px;
+            border: none;
+        }
+        input {
+            width: 80%;
+        }
+        button {
+            background: #ff99bb;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #ff6699;
+        }
+        #output {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <center>
+    <div class="container">
+        <div class="content">
+            <h1>Hiiii <span style="color:#ff3399; font-weight:bold;">Ms.Caballero</span> heres my calculator◝(ᵔᗜᵔ)◜⋆˚࿔♡</h1>
+            <p>(this took me way too long to figure out)</p>
+            <p>So whats our given?? ₊˚⊹♡(  ≧ᗜ≦)</p>
+            
+            <details ontoggle="message()"> 
+                <summary>Instructions ₍^. .^₎⟆</summary>
+                <i>Enter two numbers then find out what it would equal to, based on the buttons! ദി(ᵔᗜᵔ)୨ৎ</i>
+            </details>
+            
+            <input type="number" id="num1" placeholder="Enter a value for a"> <br>
+            <input type="number" id="num2" placeholder="Enter a value for b"> <br>
+            <button onclick="multiply()">Product of a and b</button>
+            <button onclick="power()">a raised to b</button>
+            <button onclick="remainder()">Get the remainder</button>
+            <button onclick="checkEquality()">is a is equal to b</button>
+            <p id="output"></p>
+        </div>
+        <div class="image">
+            <img src="https://cdn.discordapp.com/attachments/1278729923011285013/1336334237741092915/xf8ZLAuUcvFwAAAABJRU5ErkJggg.png?ex=67a36dbe&is=67a21c3e&hm=92a0ce2708427c7b8e120935e316313b3040d2a668d3c7e2895a3a45b2da46aa&" alt="lalala">
+        </div>
+    </div>
+</center>
+<ceter>
+    <script>
+        function multiply() {
+            let a = parseInt(document.getElementById('num1').value);
+            let b = parseInt(document.getElementById('num2').value);
+            document.getElementById('output').innerText = `Product: ${a * b}`;
+        }
+
+        function power() {
+            let a = parseInt(document.getElementById('num1').value);
+            let b = parseInt(document.getElementById('num2').value);
+            document.getElementById('output').innerText = `a raised to b: ${a ** b}`;
+        }
+
+        function remainder() {
+            let a = parseInt(document.getElementById('num1').value);
+            let b = parseInt(document.getElementById('num2').value);
+            document.getElementById('output').innerText = `Remainder: ${a % b}`;
+        }
+
+        function checkEquality() {
+            let a = parseInt(document.getElementById('num1').value);
+            let b = parseInt(document.getElementById('num2').value);
+            let result = (a === b) ? "a is equal to b" : "a is not equal to b";
+            document.getElementById('output').innerText = result;
+        }
+    </script>
+</center>
+</body>
+</html>
